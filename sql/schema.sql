@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS account (
+    id INTEGER PRIMARY KEY,
+    cash REAL NOT NULL DEFAULT 10000
+);
+
+
+CREATE TABLE IF NOT EXISTS positions (
+    symbol TEXT PRIMARY KEY,
+    quantity REAL NOT NULL,
+    avg_price REAL NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS trades (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    symbol TEXT NOT NULL,
+    side TEXT NOT NULL,          -- BUY / SELL
+    quantity REAL NOT NULL,
+    price REAL NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
