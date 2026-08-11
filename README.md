@@ -8,19 +8,19 @@ No brokers. No real money. Just market logic.
 
 ---
 
-## ⚡ Features
-- 💰 Starting cash: $10,000- 💰 Starting cash: $10,000
-- 📈 Live market prices (Yahoo Finance)
-- 💼 Portfolio tracking (positions + PnL)
-- 🧠 Average cost basis calculation
-- 💰 Buy / Sell simulation
-- 📊 Real-time portfolio valuation
-- 🗄 SQLite storage (persistent portfolio)
-- 💬 Interactive CLI interface
+## Features
+-  Starting cash: $10,000-  Starting cash: $10,000
+-  Live market prices (Yahoo Finance)
+-  Portfolio tracking (positions + PnL)
+-  Average cost basis calculation
+-  Buy / Sell simulation
+-  Real-time portfolio valuation
+-  SQLite storage (persistent portfolio)
+-  Interactive CLI interface
 
 ---
 
-## ⚙️ How it works
+##  How it works
 
 - You start with **$10,000 cash**
 - Buying assets reduces cash
@@ -30,7 +30,7 @@ No brokers. No real money. Just market logic.
 
 ---
 
-## 🧾 Commands
+##  Commands
 
 | Command            | Description                         |
 |--------------------|-------------------------------------|
@@ -42,13 +42,13 @@ No brokers. No real money. Just market logic.
 | `QUIT67`           | Alternative exit command            |
 ---
 
-## 🚀 Run project
+##  Run project
 
 ```bash
 pip install -r requirements.txt
 python main.py
 
-## 📂 Project structure
+##  Project structure
 demo_trade_cli/
 ├── main.py              # Entry point
 ├── cli.py               # CLI engine
@@ -62,14 +62,14 @@ demo_trade_cli/
 │
 ├── requirements.txt
 └── README.md
-🗄 Database schema
+  Database schema
 CREATE TABLE positions (
     symbol TEXT PRIMARY KEY,
     quantity REAL,
     avg_price REAL
 );
 ```
-📊 Example usage
+  Example usage
 ```
 > /buy AAPL 10
 Bought 10 AAPL @ 170.45
@@ -83,25 +83,25 @@ AAPL: 10 shares | avg 168.10 | value 1704.50 | PnL +23.50
 
 Total portfolio value: $9999.00
 ```
-## 🧠 Design philosophy
+##  Design philosophy
 
 This project focuses on:
 simplicity over complexity
 explainable financial logic
 modular architecture
 extensibility (Postgres / web dashboard ready)
-## ⚠️ Limitations
+##  Limitations
 No real broker integration
 No order book simulation
 No slippage / fees modeling
 Prices are delayed (API limitation)
-🔮 Future improvements
-📊 Portfolio risk scoring (integrate risk engine)
-📉 Charts (equity curve, drawdown)
-🌐 FastAPI web version
-🏦 Postgres migration
-📡 Real-time WebSocket prices
-🤖 Strategy backtesting module
+ Future improvements
+ Portfolio risk scoring (integrate risk engine)
+ Charts (equity curve, drawdown)
+ FastAPI web version
+ Postgres migration
+ Real-time WebSocket prices
+ Strategy backtesting module
 ## 📜 License
 
 MIT License
